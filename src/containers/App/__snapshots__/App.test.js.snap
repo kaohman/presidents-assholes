@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<div>
+  <header>
+    <h1>
+      Presidents Assholes
+    </h1>
+  </header>
+  <Connect(FilterControls) />
+  <Connect(Presidents) />
+</div>
+`;

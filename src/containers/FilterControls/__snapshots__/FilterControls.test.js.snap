@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterControls should match the snapshot 1`] = `
+<div
+  className="filter-container"
+>
+  <select
+    onChange={[Function]}
+  >
+    <option
+      default={true}
+      value=""
+    >
+      All
+    </option>
+    <option
+      value="No Party"
+    >
+      No Party
+    </option>
+    <option
+      value="Federalist"
+    >
+      Federalist
+    </option>
+    <option
+      value="Democratic-Republican"
+    >
+      Democratic-Republican
+    </option>
+    <option
+      value="Whig"
+    >
+      Whig
+    </option>
+    <option
+      value="Democratic"
+    >
+      Democratic
+    </option>
+    <option
+      value="Republican"
+    >
+      Republican
+    </option>
+  </select>
+</div>
+`;

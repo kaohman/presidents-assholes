@@ -1,8 +1,32 @@
+import React from 'react';
 import { App, mapStateToProps, mapDispatchToProps } from './App';
 import { getPresidents } from '../../thunks/getPresidents';
 jest.mock('../../thunks/getPresidents');
+import { shallow } from 'enzyme';
 
 describe('App', () => {
+  let wrapper;
+  let getPresidentsMock;
+
+  beforeEach(() => {
+    getPresidentsMock = jest.fn();
+    wrapper = shallow(
+      <App 
+        getPresidents={getPresidentsMock}
+      />
+    )
+  });
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  describe('componentDidMount', () => {
+    it('should call getPresidents', () => {
+      wrapper.instance().componentDidMount();
+      expect(getPresidentsMock).toHaveBeenCalled();
+    });
+  });
 
   describe('mapStateToProps', () => {
     it('should return an object with a presidents array', () => {

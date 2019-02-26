@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`President should match the snapshot 1`] = `
+<div
+  className="president-card"
+>
+  <h3>
+    John Adams
+  </h3>
+  <h4>
+    2
+  </h4>
+  <h4>
+    Federalist
+  </h4>
+  <p>
+    Birth: 
+    1735
+    , Death: 
+    1826
+  </p>
+  <p>
+    Office: 
+    1797-03-04
+    -
+    1801-03-04
+  </p>
+</div>
+`;
