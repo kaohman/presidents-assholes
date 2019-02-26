@@ -49,4 +49,14 @@ describe('actions', () => {
     const result = actions.setError(error);
     expect(result).toEqual(expected);
   });
+
+  it('should have a type of SET_PARTY', () => {
+    const party = 'Whig';
+    const expected = {
+      type: 'SET_PARTY',
+      party
+    };
+    const result = actions.setParty(party);
+    expect(result).toEqual(expected);
+  });
 });

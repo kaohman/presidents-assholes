@@ -13,3 +13,8 @@ export const setError = (error) => ({
   error
 });
 
+export const setParty = (party) => ({
+  type: 'SET_PARTY',
+  party
+});
+

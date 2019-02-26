@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getPresidents } from '../../thunks/getPresidents';
 import { connect } from 'react-redux';
 import Presidents from '../Presidents/Presidents';
+import FilterControls from '../FilterControls/FilterControls';
 
 
 export class App extends Component {
@@ -19,6 +20,7 @@ export class App extends Component {
           {loading && <h2>Loading data...</h2>}
           {error && <h2>Error fetching data: {error}</h2>}
         </header>
+        <FilterControls />
         <Presidents />
       </div>
     );

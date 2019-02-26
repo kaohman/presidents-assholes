@@ -21,7 +21,7 @@ describe('App', () => {
   });
 
   describe('mapDispatchToProps', () => {
-    it('should call dispatch with getPresidents when componentDidMount is called', () => {
+    it('should call dispatch with getPresidents is called', () => {
       const mockDispatch = jest.fn();
       const actionToDispatch = getPresidents();
       const mappedProps = mapDispatchToProps(mockDispatch);

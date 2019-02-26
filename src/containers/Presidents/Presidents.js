@@ -5,7 +5,7 @@ import President from '../../components/President/President';
 export const Presidents = ({ presidents }) => {
 
   return (
-    <div>
+    <div className='presidents-container'>
       {
         presidents.map(president => {
           return <President president={president} key={president.number}/>
