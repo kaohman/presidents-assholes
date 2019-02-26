@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import { getPresidents } from './thunks/getPresidents';
+import { getPresidents } from '../../thunks/getPresidents';
 import { connect } from 'react-redux';
+import Presidents from '../Presidents/Presidents';
 
 
 class App extends Component {
@@ -19,6 +19,7 @@ class App extends Component {
           {loading && <h2>Loading data...</h2>}
           {error && <h2>Error fetching data: {error}</h2>}
         </header>
+        <Presidents />
       </div>
     );
   }
