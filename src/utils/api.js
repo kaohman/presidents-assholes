@@ -3,6 +3,6 @@ export const fetchData = async (path) => {
   if (response.ok) {
     return response.json();
   } else {
-    throw error.statusText
+    throw response.statusText
   }
 }
