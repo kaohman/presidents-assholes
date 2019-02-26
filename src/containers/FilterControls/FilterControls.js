@@ -1,35 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux'; 
 import { setParty } from '../../actions';
 
-export class FilterControls extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      party: ''
-    }
+export const FilterControls = ({ setParty }) => {
+  const updateParty = (e) => {
+    setParty(e.target.value)
   }
 
-  updateParty = (e) => {
-    this.props.setParty(e.target.value)
-    this.setState({ party: e.target.value });
-  }
-
-  render() {
-    return (
-      <div>
-        <select onChange={this.updateParty}>
-          <option default value=''>All</option>
-          <option value='No Party'>No Party</option>
-          <option value='Federalist'>Federalist</option>
-          <option value='Democratic-Republican'>Democratic-Republican</option>
-          <option value='Whig'>Whig</option>
-          <option value='Democratic'>Democratic</option>
-          <option value='Republican'>Republican</option>
-        </select>
-      </div>
-    )
-  }
+  return (
+    <div className='filter-container'>
+      <select onChange={updateParty}>
+        <option default value=''>All</option>
+        <option value='No Party'>No Party</option>
+        <option value='Federalist'>Federalist</option>
+        <option value='Democratic-Republican'>Democratic-Republican</option>
+        <option value='Whig'>Whig</option>
+        <option value='Democratic'>Democratic</option>
+        <option value='Republican'>Republican</option>
+      </select>
+    </div>
+  )
 }
 
 export const mapDispatchToProps = (dispatch) => ({
