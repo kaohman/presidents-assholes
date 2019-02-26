@@ -5,6 +5,7 @@ describe('Presidents', () => {
   describe('mapStateToProps', () => {
     it('should return an object with a presidents array', () => {
       const mockState = {
+        party: 'Whig',
         presidents: [
           {
             number: 1,
@@ -28,6 +29,7 @@ describe('Presidents', () => {
         otherState: false
       };
       const expected = {
+        party: 'Whig',
         presidents: [
           {
             number: 1,
