@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Presidents from '../Presidents/Presidents';
 
 
-class App extends Component {
+export class App extends Component {
 
   componentDidMount() {
     this.props.getPresidents();
@@ -25,12 +25,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   error: state.error,
   loading: state.loading,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   getPresidents: () => dispatch(getPresidents()),
 });
 

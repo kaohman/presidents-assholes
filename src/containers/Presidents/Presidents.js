@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import President from '../President/President';
+import President from '../../components/President/President';
 
-const Presidents = ({ presidents }) => {
+export const Presidents = ({ presidents }) => {
 
   return (
     <div>
@@ -15,7 +15,7 @@ const Presidents = ({ presidents }) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   presidents: state.presidents,
 });
 
